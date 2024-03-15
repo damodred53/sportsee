@@ -1,0 +1,30 @@
+.header {
+    
+    background-color: $backgroundNavBar;
+    width: 100%;
+    
+    
+    &_list {
+        @include flex_row_spacebetween;
+        list-style-type: none;
+        padding: 0%;
+        padding-left: 2rem;
+        padding-right: 6rem;
+        margin: 0%;
+        &_subtitle {
+            color: $colorBackgroundTitle!important;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+        }
+
+        &_title {
+            color: $colorBackgroundNavBar;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+    }
+    
+}

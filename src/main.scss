@@ -1,0 +1,12 @@
+/* Import de l'ensemble des fichiers sass */
+@import "../sass/base/base.scss";
+@import "../sass/base/typo.scss";
+
+
+@import "../sass/utils/variables.scss";
+@import "../sass/utils/mixin.scss";
+
+
+@import "../sass/components/Header.scss";
+@import "../sass/components/VerticalHeader.scss";
+@import "../sass/components/welcomingMessage.scss";

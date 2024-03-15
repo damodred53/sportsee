@@ -1,0 +1,45 @@
+
+.vertical {
+    background-color: $backgroundNavBar;
+    max-width: 6rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    position: relative;
+
+    &_div{      
+        min-height: 80vh;
+        &_list {
+            height: 80%;
+            list-style-type: none;
+            margin: 0%;
+            row-gap: 1.5rem;
+            padding: 0%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+            &_icon {
+                background-color: $colorBackgroundNavBar;
+                padding: 0.5rem;
+                width: 35%;
+                border-radius: 6px;
+            }
+        }
+    }
+
+    &_paragraph {
+        
+        position: absolute;
+        top: 80%;
+        left: 0%;
+        font-size: 12px;
+        width: 100%;
+        color: $colorBackgroundNavBar;
+        transform : rotate(270deg);
+        white-space: nowrap;
+    }
+}
