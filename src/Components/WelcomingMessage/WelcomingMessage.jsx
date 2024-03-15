@@ -20,13 +20,14 @@ const WelcomingMessage = () => {
             setName(resultName);
         }*/
         if (!result.userInfos || !result.userInfos.firstName) {
-            // Si result.userInfos ou result.userInfos.firstName est absent
-            console.log("résultat non mocké ou pas de prénom disponible");
-            // Dans ce cas, vous devriez peut-être gérer ce cas en conséquence
+            
+            console.log("résultat non mocké");
+            const resultName = result.data.userInfos.firstName;
+            setName(resultName);
         } else {
             // Si result.userInfos.firstName est présent
             const resultName = result.userInfos.firstName;
-            console.log("résultat mocké ou prénom disponible");
+            console.log("résultat mocké");
             setName(resultName);
         }
         }
