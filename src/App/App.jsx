@@ -15,6 +15,15 @@ const App = () => {
     const fetchData = async () => {
             const result = await Services.getUser()
             console.log( "tindin : " ,result)
+
+            const result2 = await Services.getUserActivity()
+            console.log("tindin 2 :" , result2)
+
+            const result3 = await Services.getUserAverageSession()
+            console.log("tindin 3 :" , result3)
+
+            const result4 = await Services.getUserPerformance()
+            console.log("tindin 4 :" , result4)
     }
 
     
