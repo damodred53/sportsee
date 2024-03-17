@@ -1,3 +1,5 @@
+import UserProfile from "../Components/ClassUser/ClassUser.jsx";
+
 const USER_MAIN_DATA = [
     {
         id: 12,
@@ -262,11 +264,15 @@ const USER_PERFORMANCE = [
     }
 ]
 
-const MockedDataUser = null /*{
+
+
+const MockedDataUser =   {
     USER_MAIN_DATA,
     USER_ACTIVITY,
     USER_AVERAGE_SESSIONS,
     USER_PERFORMANCE,
-}*/
+} 
+
+/*console.log("voici l'intégralité des données : ", MockedDataUser);*/
 
 export default MockedDataUser; 

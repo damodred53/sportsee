@@ -12,9 +12,9 @@ const App = () => {
 
     /*console.log("l'ensemble des données mockées :", MockedDataUser);*/
     
-    /*const fetchData = async () => {
+    const fetchData = async () => {
             const result = await Services.getUser()
-            console.log( result)
+            console.log( "tindin : " ,result)
     }
 
     
@@ -22,7 +22,7 @@ const App = () => {
     useEffect(() => {
         fetchData()
         
-    }, [])*/
+    }, [])
 
 
     return (

@@ -8,28 +8,9 @@ const WelcomingMessage = () => {
 
     const fetchNameUser = async () => {
         const result = await Services.getUser()
-        console.log(result)
-        /*if (result.data.userInfos.firstName || result.data.userInfos.firstName !== null) {
-            const resultName = result.data.userInfos.firstName;
-            console.log("résultat non mocké");
-            setName(resultName);
-        } else {
-            
-            const resultName = result.userInfos.firstName;
-            console.log("résultat mocké");
-            setName(resultName);
-        }*/
-        if (!result.userInfos || !result.userInfos.firstName) {
-            
-            console.log("résultat non mocké");
-            const resultName = result.data.userInfos.firstName;
-            setName(resultName);
-        } else {
-            // Si result.userInfos.firstName est présent
-            const resultName = result.userInfos.firstName;
-            console.log("résultat mocké");
-            setName(resultName);
-        }
+        const resultName = result.firstName;
+        setName(resultName);
+
         }
 
     useEffect(() => {
