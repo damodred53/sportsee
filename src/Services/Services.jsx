@@ -9,18 +9,21 @@ export const getUser = async () => {
   try {
     if (MockedDataUser && MockedDataUser != null) {
       const response = MockedDataUser.USER_MAIN_DATA[id]
-      console.log(response)
+      /*console.log(response)*/
       const data = gatheringData(response)
       
       /*const data = await response.json();*/
       console.log("voici la donnée mockée : ", data)
       return data
     } else {
+      console.log("donnée non mockée ")
       const response = await fetch(API_ROUTES.USER);
       
       const data = await response.json();
-      console.log("voici la donnée non mockée : ", data)
-      return data
+      console.log("voici la data non mockée : ", data.data)
+      const formatedData = gatheringData(data.data)
+      console.log("voici la donnée non mockée : ", formatedData)
+      return formatedData
     }
     
     

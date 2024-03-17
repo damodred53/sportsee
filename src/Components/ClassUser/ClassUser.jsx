@@ -19,6 +19,8 @@ class UserProfile {
         this.lipidCount = userData.keyData.lipidCount
     }
 
+
+
     getFirstName() {
         return this.firstName;
     }

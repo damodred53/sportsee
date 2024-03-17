@@ -266,12 +266,12 @@ const USER_PERFORMANCE = [
 
 
 
-const MockedDataUser =   {
+const MockedDataUser = null /* {
     USER_MAIN_DATA,
     USER_ACTIVITY,
     USER_AVERAGE_SESSIONS,
     USER_PERFORMANCE,
-} 
+} */
 
 /*console.log("voici l'intégralité des données : ", MockedDataUser);*/
 
