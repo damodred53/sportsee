@@ -266,7 +266,7 @@ const USER_PERFORMANCE = [
 
 
 
-const MockedDataUser = null /* {
+const MockedDataUser = null /*  {
     USER_MAIN_DATA,
     USER_ACTIVITY,
     USER_AVERAGE_SESSIONS,

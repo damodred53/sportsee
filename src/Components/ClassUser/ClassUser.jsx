@@ -28,4 +28,46 @@ class UserProfile {
     
 }
 
-export default UserProfile;
+class UserProfileActivity {
+
+    constructor (userData) {
+
+        this.id = userData.userId
+        this.sessions = userData.sessions
+
+    }
+ 
+}
+
+class UserProfileAverageSession {
+
+    constructor (userData) {
+
+        this.id = userData.userId
+        this.sessions = userData.sessions
+
+    }
+ 
+}
+
+class UserProfilePerformance {
+
+    constructor (userData) {
+
+        this.id = userData.userId
+        this.sessions = userData.data
+        this.kind = userData.kind
+    }
+ 
+}
+
+const allDataUser = {
+    UserProfileActivity,
+    UserProfile,
+    UserProfileAverageSession,
+    UserProfilePerformance
+}
+
+
+
+export default allDataUser

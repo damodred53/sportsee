@@ -4,7 +4,7 @@ import VerticalHeader from "../Components/VerticalHeader/VerticalHeader";
 import Services from "../Services/Services.jsx";
 import WelcomingMessage from "../Components/WelcomingMessage/WelcomingMessage.jsx";
 import { useEffect } from "react";
-import MockedDataUser from "../_Datamock_/MockedData.jsx";
+
 
 const App = () => {
 
