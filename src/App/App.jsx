@@ -4,6 +4,7 @@ import VerticalHeader from "../Components/VerticalHeader/VerticalHeader";
 import Services from "../Services/Services.jsx";
 import WelcomingMessage from "../Components/WelcomingMessage/WelcomingMessage.jsx";
 import { useEffect } from "react";
+import Charts from "../Components/ChartsArea/Charts.jsx";
 
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
             < Header />
             <VerticalHeader />
             < WelcomingMessage />
+            <Charts />
         </div>
     )
 } 

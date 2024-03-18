@@ -2,7 +2,7 @@ import { API_ROUTES } from "../Services/Utils.jsx";
 import MockedDataUser from "../_Datamock_/MockedData.jsx";
 import allData from "../Services/ConfigurationUser.jsx";
 
-const id = "1"
+const id = "0"
 export const getUser = async () => {
 
   try {
@@ -101,10 +101,10 @@ export const getUserPerformance = async () => {
 }
 
 const ObjectToExport = {
-  getUser,
+    getUser,
    getUserActivity,
    getUserAverageSession,
-   getUserPerformance,
+   getUserPerformance
      }; 
 export default ObjectToExport;
 
