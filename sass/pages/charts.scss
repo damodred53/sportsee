@@ -4,13 +4,6 @@
     left: 20rem;
     width: 75%;
     height: 600px;
-    
-
-
-    /*&_line {
-        height: 15rem;
-        width: 15rem;
-    }*/
 }
 
 .line_chart {
@@ -23,30 +16,42 @@
     border-radius: 10px;
 
     &_title {
-        
         font-size: 35px;
-        
     }
 
     &_legend {
         position: absolute;
-        top: 1.5rem;
-        left: 2rem;
+        top: 0.7rem;
+        left: 1.5rem;
         opacity: 0.6;
     }
 
     &_line {
-        opacity: 0.6;
+
+        background-color: linear-gradient(90deg, rgba(255,255,255,0.7063200280112045), rgba(255,255,255,1) );
+
     }
-    
+
+    &_darkened {
+        width: 30%;
+        height: 100%;
+        position: absolute;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        right: 0;
+        background-color: black;
+        opacity: 0.2;
+        color: white;
+    }
 }
 
-/* ajout de css spécifique au module rechats */
+/* Ajout de css spécifique au module natifs de Rechats */
 
 .recharts-line-dots {
     display: none;
 }
 
-.recharts-responsive-container {
-    height: 50%;
+.recharts-cartesian-axis-line {
+    display: none;
 }
+

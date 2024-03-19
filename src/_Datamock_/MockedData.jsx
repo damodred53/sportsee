@@ -266,7 +266,7 @@ const USER_PERFORMANCE = [
 
 
 
-const MockedDataUser =    {
+const MockedDataUser =   {
     USER_MAIN_DATA,
     USER_ACTIVITY,
     USER_AVERAGE_SESSIONS,
