@@ -1,11 +1,15 @@
 import React from "react";
+import ChartLine from "./ChartLine/ChartLine";
 
-const Charts = () => {
+const Charts = (data) => {
 
+    console.log("données envoyés dans le composant charts", data)
 
     return (
         <div className="chart">
-            <div className="chart_line"></div>
+            
+                <ChartLine />
+            
         </div>
     )
 }

@@ -2,7 +2,7 @@ import { API_ROUTES } from "../Services/Utils.jsx";
 import MockedDataUser from "../_Datamock_/MockedData.jsx";
 import allData from "../Services/ConfigurationUser.jsx";
 
-const id = "0"
+const id = "1"
 export const getUser = async () => {
 
   try {

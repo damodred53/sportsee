@@ -3,13 +3,13 @@ import Header from "../Components/Header/Header";
 import VerticalHeader from "../Components/VerticalHeader/VerticalHeader";
 import Services from "../Services/Services.jsx";
 import WelcomingMessage from "../Components/WelcomingMessage/WelcomingMessage.jsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Charts from "../Components/ChartsArea/Charts.jsx";
 
 
 const App = () => {
 
-
+    const [dataLineChart, setDataChartLine] = useState([])
 
     /*console.log("l'ensemble des données mockées :", MockedDataUser);*/
     
@@ -25,6 +25,7 @@ const App = () => {
 
             const result4 = await Services.getUserPerformance()
             console.log("tindin 4 :" , result4)
+            setDataChartLine(result3)
     }
 
     
@@ -40,7 +41,7 @@ const App = () => {
             < Header />
             <VerticalHeader />
             < WelcomingMessage />
-            <Charts />
+            <Charts  />
         </div>
     )
 } 
