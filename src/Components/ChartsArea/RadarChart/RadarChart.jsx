@@ -31,8 +31,6 @@ const ChartRadar = () => {
         fetchData()
     }, [])
 
-    console.log("voici la response du radar chart: ", dataPerformance)
-    console.log("voici la response du radar chart 2: ", dataKind)
 
     const chartDataPerformance = dataPerformance.map((item, index) => (
         {
@@ -43,14 +41,16 @@ const ChartRadar = () => {
 
 
     return (
+      <div className='radar'>
         <ResponsiveContainer width="100%" height="100%">
-          <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartDataPerformance}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="subject" />
-            <PolarRadiusAxis />
-            <Radar name="Performance" dataKey="fullMark" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+          <RadarChart  cx="50%" cy="50%" outerRadius="70%" data={chartDataPerformance}>
+           
+            <PolarAngleAxis dataKey="subject" stroke="white" />
+            <PolarGrid gridType="polygon" radialLines={false} stroke="white" />
+            <Radar name="Performance" dataKey="fullMark"  fill="#FF0101" fillOpacity={0.7}  />
           </RadarChart>
         </ResponsiveContainer>
+      </div>
       );
 
 }

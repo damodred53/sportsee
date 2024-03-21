@@ -1,6 +1,7 @@
 import React from "react";
 import ChartLine from "./ChartLine/ChartLine";
 import ChartRadar from "./RadarChart/RadarChart";
+import RadialChart from "./RadialBarChart/RadialBarChart.jsx"
 
 const Charts = (data) => {
 
@@ -11,6 +12,8 @@ const Charts = (data) => {
             
                 <ChartLine />
                 <ChartRadar />
+                <RadialChart />
+                
         </div>
     )
 }

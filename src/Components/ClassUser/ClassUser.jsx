@@ -6,7 +6,6 @@ class UserProfile {
 
     constructor(userData) {
 
-        console.log("je suis passé par ici : ", userData)
 
         this.id = userData.id
         this.firstName = userData.userInfos.firstName

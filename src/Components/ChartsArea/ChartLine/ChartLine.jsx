@@ -26,9 +26,9 @@ const ChartLine = () => {
   
 
   // Mapper les données de sessions dans le format attendu par Recharts
-  const chartData = average.map(item => (
+  const chartData = average.map((item, index) => (
     {
-    name: arrayDay, // Utilisez le jour comme nom de la série
+    name: arrayDay[index], 
     durée: item.sessionLength /* `${item.sessionLength} min`*/ // Utilisez la longueur de la session comme valeur
   }));
 
