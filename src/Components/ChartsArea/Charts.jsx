@@ -1,5 +1,6 @@
 import React from "react";
 import ChartLine from "./ChartLine/ChartLine";
+import ChartRadar from "./RadarChart/RadarChart";
 
 const Charts = (data) => {
 
@@ -9,7 +10,7 @@ const Charts = (data) => {
         <div className="chart">
             
                 <ChartLine />
-            
+                <ChartRadar />
         </div>
     )
 }

@@ -5,13 +5,7 @@ import Services from "../../../Services/Services.jsx";
 const ChartLine = () => {
   const [average, setAverage] = useState([]);
   const arrayDay = ["L", "M", "M", "J", "V", "S", "D"];
-  const test = "prout"
 
-  /*const renderLegend = () => {
-    return (
-        <p className='line_chart_legend'>Durée moyenne des sessions</p>
-    )
-  }*/
 
 
   useEffect(() => {
