@@ -23,7 +23,19 @@ const ChartLine = () => {
 
   console.log("voici average:", average)
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip_line">
+          <p className="label">{`${payload[0].value}min`}</p>
+          
+        </div>
+      );
+    }
   
+
+    return null;
+  };
 
   // Mapper les données de sessions dans le format attendu par Recharts
   const chartData = average.map((item, index) => (
@@ -60,7 +72,7 @@ const ChartLine = () => {
             tick={{ fontSize: 13, stroke: "white", opacity: 0.6}}
           />
           
-          <Tooltip stroke="red"/>
+          <Tooltip stroke="red" content={CustomTooltip}/>
           <defs>    
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop  stopColor="rgba(255,255,255,1)" stopOpacity="0.6" /> {/* Gris (code RVB: 128,128,128) */}

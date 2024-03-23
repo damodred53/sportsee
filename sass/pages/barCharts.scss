@@ -1,0 +1,53 @@
+
+.barchart {
+    position: absolute;
+    height: 18rem;
+    width: 52rem;
+    background-color: #FBFBFB;
+    /*padding: 1rem;*/
+
+    &_title {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+
+    }
+
+    &_barchart_main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+
+.custom-tooltip {
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: 500;
+    /*border-radius: 3px 3px 0px 0px;*/
+}
+
+.recharts-default-legend {
+    text-align: right!important;
+}
+
+.recharts-cartesian-axis-tick-line {
+    display: none;
+}
+
+.recharts-legend-item-text {
+    color: black!important;
+}
+
+.recharts-legend-item {
+    margin-left: 1rem;
+}
+

@@ -1,7 +1,8 @@
 import React from "react";
 import ChartLine from "./ChartLine/ChartLine";
 import ChartRadar from "./RadarChart/RadarChart";
-import RadialChart from "./RadialBarChart/RadialBarChart.jsx"
+import RadialChart from "./RadialBarChart/RadialBarChart.jsx";
+import BarChart from "./BarChart/BarChart.jsx";
 
 const Charts = (data) => {
 
@@ -10,6 +11,7 @@ const Charts = (data) => {
     return (
         <div className="chart">
             
+                <BarChart />
                 <ChartLine />
                 <ChartRadar />
                 <RadialChart />

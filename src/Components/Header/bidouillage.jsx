@@ -114,7 +114,13 @@ export const WithCustomizedClickLegendEvent = {
 
 
 
-
+/*<ResponsiveContainer width="100%" height="100%">
+                <RadialBarChart cx="50%" cy="50%" innerRadius="65%" outerRadius="75%" barSize={10} data={chartDataScore} startAngle={-180} endAngle={450}>
+                    {radialBars}
+                    <text x="10%" y="15%" fontSize={22}> </text>
+                    <Legend iconSize={0} layout="vertical" verticalAlign="middle" />
+                </RadialBarChart>
+            </ResponsiveContainer>*/
       
 
  
