@@ -125,4 +125,41 @@ export const WithCustomizedClickLegendEvent = {
 
  
     
-               
+            /*<div className='barchart'>
+            <ResponsiveContainer className="barchart_main" width="100%" height="100%" margin={{top : 5}}>
+                <text className='barchart_title' cx={20} cy={20}>Activité quotidienne</text>
+                
+            <BarChart
+                width={100}
+                height={350}
+                data={mappedActivity}
+                margin={{
+                top: 75,
+                right: 50,
+                left: 50,
+                bottom: 0
+                }}
+                barGap={10}
+                
+            >
+              <CartesianGrid className='cartesian'  strokeDasharray="3 3" />
+              <XAxis   dataKey="name"  scale='point' padding={{top:10}} />
+              <Tooltip className="tooltype" cursor={{fill: 'black'}} content={<CustomTooltip />} /> 
+                <Legend className='barchart_legend' iconSize={10} iconType='circle' wrapperStyle={StyleLegend}  payload={[{
+                    value: 'Poids (kg)',
+                    type: 'circle',
+                    color: 'black'
+                    },
+                    {
+                    value: 'Calories brûlées (kCal)',
+                    type: 'circle',
+                    color: 'red',
+                }]}
+                />
+                  <Bar dataKey="pv" background={{ fill: '#eee' }}   barSize={7} className='barchart_bar' radius={[10, 10, 0, 0]} fill="black"  />
+                  <Bar dataKey="uv"  barSize={7} className='barchart_bar' radius={[10, 10, 0, 0]} fill="red"  />
+                
+            </BarChart>
+            
+            </ResponsiveContainer>
+        </div>*/

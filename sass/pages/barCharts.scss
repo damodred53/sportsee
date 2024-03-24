@@ -1,30 +1,44 @@
 
 .barchart {
-    position: absolute;
-    height: 18rem;
-    width: 52rem;
+    position: relative;
+    height: 15rem;
+    width: 55%;
     background-color: #FBFBFB;
-    /*padding: 1rem;*/
+    padding-top: 4rem;
+    padding-left: 3rem;
+    
 
     &_title {
         position: absolute;
-        top: 2rem;
+        top: 1rem;
         left: 2rem;
         font-weight: 500;
         font-size: 18px;
         line-height: 24px;
-
+        margin: 0%;
     }
 
-    &_barchart_main {
+    &_barchart_container_main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+       
+    }
+
+    &_legend {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
     }
 
 
 }
+
 
 
 .custom-tooltip {
@@ -32,7 +46,7 @@
     color: white;
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-weight: 500;
-    /*border-radius: 3px 3px 0px 0px;*/
+
 }
 
 .recharts-default-legend {
@@ -50,4 +64,14 @@
 .recharts-legend-item {
     margin-left: 1rem;
 }
+
+
+// test
+
+.daily-activity-chart {
+    height: 25rem;
+}
+
+
+
 
