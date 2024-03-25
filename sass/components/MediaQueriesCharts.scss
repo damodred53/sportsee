@@ -1,0 +1,194 @@
+
+@media (max-width : 1800px) {
+
+    .line_chart, .radar,  .radial {
+
+        height: 40%;
+        width: 23%;
+    }
+
+    .radar {
+        left: 20rem;
+
+    }
+    .radial {
+        left: 40rem;
+    }
+
+    .nutriment {
+        width: 13rem;
+    }
+}
+
+@media (max-width : 1500px) {
+
+    .line_chart, .radar,  .radial {
+
+        height: 35%;
+        width: 22%;
+
+
+    }
+    .radar {
+        left: 18rem;
+
+    }
+    .radial {
+        left: 36rem;
+    }
+}
+
+@media (max-width : 1400px) {
+
+    .line_chart, .radar,  .radial {
+
+        height: 32%;
+        width: 23%;
+
+
+    }
+    .radar {
+        left: 16rem;
+
+    }
+    .radial {
+        left: 32rem;
+    }
+
+    .chart {
+        left : 15rem
+    }
+
+    .barchart {
+        width: 74%;
+    }
+
+    .all_nutriment_user {
+        height: 34rem;
+    }
+
+    .responsive_radar {
+        width: 90%!important;
+        padding-left:0.5rem;
+    }
+    
+}
+
+@media (max-width : 1200px) {
+
+    .line_chart, .radar,  .radial {
+
+        height: 30%;
+        width: 24%;
+
+
+    }
+    .radar {
+        left: 14rem;
+
+    };
+
+    .radial {
+        left: 28rem;
+    };
+
+    .chart {
+        left : 13rem
+    };
+
+
+}
+
+@media (max-width : 1024px) {
+
+    .line_chart, .radar,  .radial {
+
+        height: 35%;
+        width: 25%;
+        top : 18rem
+    }
+    .radar {
+        left: 12rem;
+    };
+
+    .radial {
+        left: 24rem;
+    };
+
+    .chart {
+        left : 13rem;
+        height : 30rem;
+        width: 45rem;
+    };
+
+    .nutriment {
+        height: 5rem;
+        width: 10rem;
+        column-gap: 1rem;
+
+        &_picture {
+            padding: 0.5rem;
+        }
+
+        &_indication {
+
+            &_number{
+                font-size: 16px;
+            }
+            &_category {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .barchart {
+
+        width: 72%;
+        height: 13rem;
+
+        &_title {
+            font-size: 14px;
+        }
+
+    }
+
+    .recharts-legend-item-text {
+        font-size: 12px;
+    }
+
+    .all_nutriment_user {
+        height: 28rem;
+        
+    }
+
+    .recharts-polar-angle-axis {
+        width: 8rem;
+    }
+
+    .responsive_radar {
+        width: 80%!important;
+        padding-left:0.5rem;
+    }
+
+    .recharts-surface {
+        width: 100%;
+    }
+
+    .recharts-legend-item , .recharts-legend-item  {
+       margin: 0%!important;
+        text-align: center;
+        
+    }
+
+    .line_chart_legend{
+        font-size: 14px;
+    }
+
+    .welcoming {
+
+        &_title {
+            font-size: 40px;
+        }
+    }
+
+}

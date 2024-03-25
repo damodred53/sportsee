@@ -19,37 +19,6 @@ const RadialChart = () => {
     
     console.log("voici la réponse du score : ", scoreToShow);
 
-    /*const data = [
-        {
-            name: "Score",
-            uv: scoreToShow,            
-        },
-        {
-            name: "test",
-            uv: 100,
-            width : 0
-        }
-    ];
-
-    const chartDataScore = data.map((item, index) => ({
-        name: "Score"[index],
-        uv: item.uv
-    }));*/
-    
-    // Mapper les données de chartDataScore dans les composantes RadialBar
-    /*const radialBars = chartDataScore.map((item, index) => (
-        <RadialBar
-            key={index}
-            minAngle={15}
-            background
-            clockWise
-            dataKey="uv"
-            barSize={10}
-            fill='white'
-            className='second'
-        />
-    ));*/
-
     const style = {
         background: '#fff',
         fill: 'red',
