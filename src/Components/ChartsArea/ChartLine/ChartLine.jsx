@@ -6,7 +6,10 @@ const ChartLine = () => {
   const [average, setAverage] = useState([]);
   const arrayDay = ["L", "M", "M", "J", "V", "S", "D"];
 
-
+ /**
+     * Hook permettant d'appeler la fonction getUserAverageSession lors du premier render
+     * puis de mettre le contenu dans un useState qui est à l'origine un tableau vide.
+     */
 
   useEffect(() => {
     const fetchAverageData = async () => {
@@ -21,23 +24,28 @@ const ChartLine = () => {
     fetchAverageData();
   }, []);
 
-  console.log("voici average:", average)
+  /**
+    * Fonction permettant d'afficher et de remplir l'infobulle
+    * @param {*} param0 
+    * @returns React.JSX.Element
+    */
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip_line">
-          <p className="label">{`${payload[0].value}min`}</p>
+          <p className="label">{`${payload[0].value} min`}</p>
           
         </div>
       );
     }
-  
-
     return null;
   };
 
-  // Mapper les données de sessions dans le format attendu par Recharts
+/**
+ * fonction permettant de mapper les données contenues dans le hook useState afin 
+ * de les intégrer dans le graphique ensuite
+ */
   const chartData = average.map((item, index) => (
     {
     name: arrayDay[index], 
@@ -50,18 +58,16 @@ const ChartLine = () => {
       <p className='line_chart_legend'>Durée moyenne des <br/>sessions</p>
       <div className='line_chart_darkened'></div>
       <ResponsiveContainer width="100%" height="100%" margin={{top : 10}}>
-      
         <LineChart
           width={500}
           height={300}
-          data={chartData} // Utilisez les données mappées ici
+          data={chartData} 
           margin={{
             top: 75,
             right: 30,
             left: 20,
             bottom: 5,
-          }}
-          
+          }} 
         >
           <XAxis
             dataKey="name"
@@ -71,16 +77,14 @@ const ChartLine = () => {
             padding={{right:5, left:5}}
             tick={{ fontSize: 13, stroke: "white", opacity: 0.6}}
           />
-          
-          <Tooltip stroke="red" content={CustomTooltip}/>
           <defs>    
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop  stopColor="rgba(255,255,255,1)" stopOpacity="0.6" /> {/* Gris (code RVB: 128,128,128) */}
-                <stop offset="100%" stopColor="rgba(255,255,255,1)" stopOpacity="1" /> {/* Blanc (code RVB: 255,255,255) */}
+                <stop  stopColor="rgba(255,255,255,1)" stopOpacity="0.6" /> 
+                <stop offset="100%" stopColor="rgba(255,255,255,1)" stopOpacity="1" /> 
             </linearGradient>
-            </defs>
-
-          <Line className='line_chart_line' type="monotone" dataKey="durée" stroke='black'  strokeWidth={3} />
+          </defs>
+          <Tooltip stroke="white" content={CustomTooltip}/>
+          <Line className='line_chart_line' type="monotone" dataKey="durée" stroke="url(#gradient)" strokeWidth={3} />
         </LineChart>
       </ResponsiveContainer>
     </div>
@@ -88,5 +92,3 @@ const ChartLine = () => {
 };
 
 export default ChartLine;
-
-//stroke="url(#gradient)"

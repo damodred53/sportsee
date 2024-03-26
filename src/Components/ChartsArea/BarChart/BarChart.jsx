@@ -1,5 +1,3 @@
-
-
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Services from "../../../Services/Services.jsx";
@@ -9,21 +7,25 @@ const BarCharts = () => {
 
     const [activity, setActivity] = useState([])
 
+    /**
+     * Hook permettant d'appeler la fonction getUserACtivity lors du premier render
+     * puis de mettre le contenu dans un useState qui est à l'origine un tableau vide.
+     */
 
     useEffect(() => {
-
         const fetchData = async () => {
             const response = await Services.getUserActivity()
-             if (response) {
-                
+             if (response) { 
                 setActivity(response.sessions)
              }
         }
-
         fetchData()
     }, [])
 
-    console.log('les données venant de activity', activity)
+
+  /**
+   * Fonction permettant de mapper le poids et les calories afin de les intégrer dans le graphique 
+   */
 
     const mappedActivity = activity.map((item, index) => ({
         name : index+1,
@@ -31,9 +33,13 @@ const BarCharts = () => {
         calories : item.calories
     }));
 
-   
+   /**
+    * Fonction permettant d'afficher et de remplir l'infobulle
+    * @param {*} param0 
+    * @returns React.JSX.Element
+    */
 
-      const CustomTooltip = ({ active, payload, label }) => {
+      const CustomTooltip = ({ active, payload}) => {
         if (active && payload && payload.length) {
           return (
             <div className="custom-tooltip">

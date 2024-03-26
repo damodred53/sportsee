@@ -1,16 +1,11 @@
-
-
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { useEffect, useState } from 'react';
 import Services from "../../../Services/Services.jsx";
 
-
-
 const ChartRadar = () => {
 
     const [dataPerformance, setDataPerformance] = useState([]);
-    const [dataKind, setDataKind] = useState([]);
     const subjects = ["Cardio", "Énergie", "Endurance", "Force", "Vitesse", "Intensité"];
     subjects.reverse()
 
@@ -21,16 +16,12 @@ const ChartRadar = () => {
                 const response = await Services.getUserPerformance()
                 
                 setDataPerformance(response.sessions)
-                setDataKind(response.kind)
 
             } catch(error) {
-    
             }
         }
-        
         fetchData()
     }, [])
-
 
     const chartDataPerformance = dataPerformance.map((item, index) => (
         {
