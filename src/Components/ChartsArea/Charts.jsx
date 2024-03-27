@@ -10,11 +10,23 @@ import Proteine from "../../Assets/chicken.svg";
 import Glucide from "../../Assets/apple.svg";
 import Hamburger from "../../Assets/cheeseburger.svg";
 
+/**
+ * Fonction regroupant les différents graphiques et statistiques à afficher à l'utilisateur
+ * @returns React.JSX.Element
+ */
+
 const Charts = () => {
 
     const [dataUser, setDataUser] = useState({});
     const [Icon, setIcon] = useState([]);
+
+    // tableau de chaine de caractères contenant les 4 nutriments à afficher sur la tableau de bord
     const nutriment = ["Calories", "Protéines", "Glucides", "Lipides"];
+
+    /**
+     * Hook permettant d'appeler la fonction getUserPerformance lors du premier render
+     * puis de mettre le contenu dans un useState qui est à l'origine un tableau vide.
+     */
 
     useEffect(() => {
 
@@ -22,32 +34,28 @@ const Charts = () => {
 
         const response = await Services.getUser();
 
-        const nutriment = [
+        //extraction de l'objet obtenu afin de standardiser les données qui seront envoyées ensuite
+        const nutrimentToAdd = [
             response.calorieCount,
             response.proteinCount,
             response.carbohydrateCount,
             response.lipidCount
         ];
-        setDataUser(nutriment)
+        setDataUser(nutrimentToAdd)
        }
 
        const fetchIcons = () => {
-
         setIcon([Energie, Proteine, Glucide, Hamburger])
-
        }
-       
 
+       // permet d'effectuer simultanément les deux fonctions asynchrones
        Promise.all([fetchData(), fetchIcons()]);
 
     }, []);
 
-    console.log("les données contenues dans dataUser : ", dataUser)
-    console.log("les données contenues dans dataIcon : ", Icon)
-
+   
     return (
         <div className="chart">
-            
                 <BarChart />
                 <ChartLine />
                 <ChartRadar />

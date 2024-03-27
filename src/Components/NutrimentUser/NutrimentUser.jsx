@@ -1,10 +1,19 @@
 import React from "react";
+import PropTypes from "prop-types"
 
+
+/**
+ * Card permettant l'affichage des données statistiques de l'utilisateur
+ * @param {Object} props - Les propriétés du composant.
+ * @param {number} props.data - La valeur des données statistiques du nutriment.
+ * @param {string} props.icone - Le chemin de l'icône représentant le nutriment.
+ * @param {string} props.nutriment - Le nom du nutriment.
+ * @param {number} props.index - L'indice du nutriment dans la liste des nutriments.
+ * @returns React.JSX.Element
+ */
 
 
 const NutrimentUser = ({data, icone, nutriment, index}) => {
-
-    console.log("voici les datas arrivées dans mon composant icone : ", icone)
 
 
     return (
@@ -17,4 +26,12 @@ const NutrimentUser = ({data, icone, nutriment, index}) => {
         </div>
     )
 }
+
+NutrimentUser.propTypes = {
+        data : PropTypes.number.isRequired,
+        icone : PropTypes.string.isRequired,
+        nutriment : PropTypes.string.isRequired,
+        index : PropTypes.number.isRequired
+}
+
 export default NutrimentUser;

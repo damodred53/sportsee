@@ -1,5 +1,5 @@
 import React from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { useEffect, useState } from 'react';
 import Services from "../../../Services/Services.jsx";
 
@@ -9,27 +9,33 @@ const ChartRadar = () => {
     const subjects = ["Cardio", "Énergie", "Endurance", "Force", "Vitesse", "Intensité"];
     subjects.reverse()
 
+    /**
+     * Hook permettant d'appeler la fonction getUserPerformance lors du premier render
+     * puis de mettre le contenu dans un useState qui est à l'origine un tableau vide.
+     */
+
     useEffect(() => {
 
         const fetchData = async () => {
             try {
                 const response = await Services.getUserPerformance()
-                
                 setDataPerformance(response.sessions)
-
             } catch(error) {
             }
         }
         fetchData()
     }, [])
 
+  /**
+   * fonction permettant de mapper les données contenues dans le hook useState afin 
+   * de les intégrer dans le graphique ensuite
+   */
+
     const chartDataPerformance = dataPerformance.map((item, index) => (
         {
           subject: subjects[index],
           fullMark: item.value
       }));
-
-
 
     return (
       <div className='radar'>

@@ -1,4 +1,5 @@
-import UserProfile from "../Components/ClassUser/ClassUser.jsx";
+
+// Il s'agit des données mockées qui sont également présentes dans l'API 
 
 const USER_MAIN_DATA = [
     {
@@ -272,7 +273,5 @@ const MockedDataUser =   {
     USER_AVERAGE_SESSIONS,
     USER_PERFORMANCE,
 } 
-
-/*console.log("voici l'intégralité des données : ", MockedDataUser);*/
 
 export default MockedDataUser; 

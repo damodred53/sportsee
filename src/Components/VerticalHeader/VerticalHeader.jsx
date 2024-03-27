@@ -5,6 +5,10 @@ import Natation from "../../Assets/natation.svg";
 import Velo from "../../Assets/velo.svg";
 import Haltere from "../../Assets/haltère.svg";
 
+/**
+ * Fonction gérant l'affichage d ela barre de navigation verticale
+ * @returns React.JSX.Element
+ */
 
 const VerticalHeader = () => {
 

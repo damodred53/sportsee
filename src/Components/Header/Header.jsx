@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import LogoSportSee from "../../Assets/main_logo.svg";
-import { useEffect } from "react";
-import Service from "../../Services/Services.jsx";
 
+/**
+ * Fonction permettant d'afficher le haut de page du site web
+ * @returns React.JSX.Element
+ */
 
 const Header = () => {
-
-    
-    
 
     return (
         <nav className="header">

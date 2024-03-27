@@ -2,26 +2,29 @@ import { API_ROUTES } from "../Services/Utils.jsx";
 import MockedDataUser from "../_Datamock_/MockedData.jsx";
 import allData from "../Services/ConfigurationUser.jsx";
 
-const id = "0"
+// la constante id permet dans le cas d'utilisation des données mockées de selectionner l'utlisateur 0 = Karl
+// 1 = Cecilia
+const id = "1";
+
+/**
+ * Fonction permettant de fetch les données de l'utilisateur, si les données mockées sont disponibles, 
+ * elles sont prises en priorité, sinon les données sont récupérées en API
+ * @returns data
+ */
+
 export const getUser = async () => {
 
   try {
     if (MockedDataUser && MockedDataUser != null) {
-
       const response = MockedDataUser.USER_MAIN_DATA[id]
       const data = allData.gatheringData(response)
-
       return data
 
     } else {
-
       const response = await fetch(API_ROUTES.USER);
       const data = await response.json();
-
       const formatedData = allData.gatheringData(data.data)
-
       return formatedData
-
     }
     
     
@@ -30,6 +33,11 @@ export const getUser = async () => {
   }
 }
 
+/**
+ * Fonction permettant de fetch les données d'activités de l'utilisateur, si les données mockées sont disponibles, 
+ * elles sont prises en priorité, sinon les données sont récupérées en API
+ * @returns data
+ */
 
 export const getUserActivity = async () => {
 
@@ -37,14 +45,11 @@ export const getUserActivity = async () => {
     if (MockedDataUser && MockedDataUser != null) {
       const response = MockedDataUser.USER_ACTIVITY[id];
       const data = allData.gatheringDataActivity(response)
-
-
       return data
     } else {
       const response = await fetch(API_ROUTES.ACTIVITY);
       const data = await response.json();
       const formatedData = allData.gatheringDataActivity(data.data)
-      
       return formatedData
     }
     
@@ -54,6 +59,11 @@ export const getUserActivity = async () => {
   }
 }
 
+/**
+ * Fonction permettant de fetch les données des moyennes de l'utilisateur, si les données mockées sont disponibles, 
+ * elles sont prises en priorité, sinon les données sont récupérées en API
+ * @returns data
+ */
 
 export const getUserAverageSession = async () => {
 
@@ -77,6 +87,12 @@ export const getUserAverageSession = async () => {
   }
 }
 
+/**
+ * Fonction permettant de fetch les données concernant les performances 
+ * de l'utilisateur, si les données mockées sont disponibles, 
+ * elles sont prises en priorité, sinon les données sont récupérées en API
+ * @returns data
+ */
 
 export const getUserPerformance = async () => {
 

@@ -5,8 +5,16 @@ import Services from "../../../Services/Services.jsx";
 const RadialChart = () => {
     const [score, setScore] = useState([]);
 
+    // constante permettant de calculer l'angle de score de la radiale
     const dataValue = 360 * score;
+
+    // résultat multiplié par 100 afin d'afficher un résultat en pourcentage
     const scoreToShow = score * 100;
+
+    /**
+     * Hook permettant d'appeler la fonction getUserPerformance lors du premier render
+     * puis de mettre le contenu dans un useState qui est à l'origine un tableau vide.
+     */
 
     useEffect(() => {
         const fetchDataScore = async () => {
@@ -16,19 +24,10 @@ const RadialChart = () => {
         fetchDataScore();
     }, []);
 
-    
-    console.log("voici la réponse du score : ", scoreToShow);
-
-    const style = {
-        background: '#fff',
-        fill: 'red',
-      }
-
     return (
         <div className='radial'>
             <ResponsiveContainer>
                 <RadialBarChart
-                className='third'
                 cx="50%"
                 cy="50%"
                 innerRadius="65%"
@@ -37,7 +36,6 @@ const RadialChart = () => {
                 startAngle={-180}
                 endAngle={-180 + -dataValue}
                 data={[{value:scoreToShow}]}
-                
                 >
                 <text x="10%" y="15%" fontSize={14} fontWeight={500}>
                     Score
@@ -60,7 +58,6 @@ const RadialChart = () => {
                         minAngle={15}
                         clockWise={true}
                         strokeLinecap="round"
-                      
                     />
             </RadialBarChart>
       </ResponsiveContainer>

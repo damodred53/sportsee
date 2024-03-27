@@ -1,12 +1,10 @@
-
+/**
+ * class permettant de standardiser les données des différents utilisateurs
+ */
 
 class UserProfile {
 
-    
-
     constructor(userData) {
-
-
         this.id = userData.id
         this.firstName = userData.userInfos.firstName
         this.lastname = userData.userInfos.lastName
@@ -18,33 +16,25 @@ class UserProfile {
         this.lipidCount = userData.keyData.lipidCount
     }
 
-
-
     getFirstName() {
         return this.firstName;
     }
 
-    
 }
 
 class UserProfileActivity {
 
     constructor (userData) {
-
         this.id = userData.userId
         this.sessions = userData.sessions
-
     }
- 
 }
 
 class UserProfileAverageSession {
 
     constructor (userData) {
-
         this.id = userData.userId
         this.sessions = userData.sessions
-
     }
  
 }
@@ -66,7 +56,5 @@ const allDataUser = {
     UserProfileAverageSession,
     UserProfilePerformance
 }
-
-
 
 export default allDataUser
