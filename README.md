@@ -3,9 +3,9 @@ Prérequis
 NodeJS (version 12.18)
 npm
 Installation et lancement du back-end
-Cloner le repo du back-end de SportSee :
 
-git clone https://github.com/logic-fabric/sportsee-api.git
+vous pouvez trouver le back-end du projet ici : 
+https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
 En se plaçant dans ce repo du back-end, installer ses dépendances :
 
@@ -32,7 +32,16 @@ Le front-end est alors consultable à l'URL http://localhost:3001.
 
 N.B. :
 l'API de SportSee ne fournit des données que pour les utilisateurs d'id 12 et 18.
-l'utilisateur 18 a un rendu alternatif du diagramme "Durée moyenne des sessions", plus pertinent que celui de la maquette Figma.
+
+Il est possible de récupérer les données à afficher via des données mockées présentes dans le front du projet, dans ce cas il est possible d'alterner les utilisateurs à afficher en modifiant l'id en haut de la partie service.
+La marche à suivre est expliquée en commentaire.
+
+De base, le programme est conçu pour récupérer les données mockées en priorité afin de rendre ce projet consultable même sans le back.
+
+Pour récupérer les données depuis l'API, il se rendre sur le ficier contenant les données mockées et modifier la valeur de MockedDataUser à null. 
+La marche à suivre est expliquée dans le document en commentaire
+
+
 Installation (english version)
 Prerequisites
 NodeJS (version 12.18)
