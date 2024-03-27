@@ -265,9 +265,9 @@ const USER_PERFORMANCE = [
     }
 ]
 
+// vous pouvez attributer la valeur null à MockedDataUser afinde permettre l'utilisation des données API
 
-
-const MockedDataUser =   {
+const MockedDataUser =  {
     USER_MAIN_DATA,
     USER_ACTIVITY,
     USER_AVERAGE_SESSIONS,

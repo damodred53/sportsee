@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { RadialBarChart, RadialBar, Legend, ResponsiveContainer, Cell } from 'recharts';
+import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 import Services from "../../../Services/Services.jsx";
 
 const RadialChart = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LogoSportSee from "../../Assets/main_logo.svg";
 
 /**

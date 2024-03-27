@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LineChart, Line, XAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceArea } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip,  ResponsiveContainer } from 'recharts';
 import Services from "../../../Services/Services.jsx";
 
 const ChartLine = () => {
