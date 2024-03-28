@@ -40,7 +40,7 @@ const ChartRadar = () => {
     return (
       <div className='radar'>
         <ResponsiveContainer  width="100%" height="100%">
-          <RadarChart className="responsive_radar"  cx="50%" cy="50%" outerRadius="60%"  data={chartDataPerformance}>
+          <RadarChart className="responsive_radar"  cx="50%" cy="50%" outerRadius="60%" fill={'#282D30'}  data={chartDataPerformance}>
            
             <PolarAngleAxis className="radar_polar_axis" dataKey="subject"  stroke="white" tickLine={false} />
             <PolarGrid gridType="polygon" radialLines={false} stroke="white"  />

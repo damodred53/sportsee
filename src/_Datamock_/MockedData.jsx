@@ -265,7 +265,7 @@ const USER_PERFORMANCE = [
     }
 ]
 
-// vous pouvez attributer la valeur null à MockedDataUser afinde permettre l'utilisation des données API
+// vous pouvez attributer la valeur null à MockedDataUser afin de permettre l'utilisation des données API
 
 const MockedDataUser =  {
     USER_MAIN_DATA,
