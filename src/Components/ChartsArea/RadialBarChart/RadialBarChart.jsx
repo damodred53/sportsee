@@ -19,8 +19,14 @@ const RadialChart = () => {
     useEffect(() => {
         const fetchDataScore = async () => {
             const response = await Services.getUser();
-            setScore(response.score);
-        }
+
+            if (response) {
+                setScore(response.score);
+            } else {
+                console.log('impossible d\'afficher les données')
+            }
+            
+        } 
         fetchDataScore();
     }, []);
 

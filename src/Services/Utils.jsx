@@ -4,7 +4,7 @@ const API_URL = 'http://localhost:3000';
 
 // la constante id permet dans le cas d'utilisation de l'api de selectionner l'utlisateur 12 = Karl
 // 18 = Cecilia
-const id = 18;
+const id = 12;
 export const API_ROUTES = {
 
     /* utilisateur fictif en provenance de l'API */

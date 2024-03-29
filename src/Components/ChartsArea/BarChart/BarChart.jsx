@@ -18,6 +18,9 @@ const BarCharts = () => {
              if (response) { 
                 setActivity(response.sessions)
              }
+             else (
+              alert("impossible d'afficher les données en provenance de l'API")
+             )
         }
         fetchData()
     }, [])

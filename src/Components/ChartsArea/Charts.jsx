@@ -34,7 +34,8 @@ const Charts = () => {
 
         const response = await Services.getUser();
 
-        //extraction de l'objet obtenu afin de standardiser les données qui seront envoyées ensuite
+        if (response) {
+            //extraction de l'objet obtenu afin de standardiser les données qui seront envoyées ensuite
         const nutrimentToAdd = [
             response.calorieCount,
             response.proteinCount,
@@ -42,13 +43,16 @@ const Charts = () => {
             response.lipidCount
         ];
         setDataUser(nutrimentToAdd)
-       }
 
-       const fetchIcons = () => {
-        setIcon([Energie, Proteine, Glucide, Hamburger])
+       
        }
+        }
 
-       // permet d'effectuer simultanément les deux fonctions asynchrones
+        const fetchIcons = () => {
+            setIcon([Energie, Proteine, Glucide, Hamburger])
+           }
+
+           // permet d'effectuer simultanément les deux fonctions asynchrones
        Promise.all([fetchData(), fetchIcons()]);
 
     }, []);

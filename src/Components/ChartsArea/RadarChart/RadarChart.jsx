@@ -21,6 +21,7 @@ const ChartRadar = () => {
                 const response = await Services.getUserPerformance()
                 setDataPerformance(response.sessions)
             } catch(error) {
+              console.log("impossible d'afficher les données : ", error)
             }
         }
         fetchData()

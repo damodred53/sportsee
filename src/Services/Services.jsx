@@ -4,7 +4,7 @@ import allData from "../Services/ConfigurationUser.jsx";
 
 // la constante id permet dans le cas d'utilisation des données mockées de selectionner l'utlisateur 0 = Karl
 // 1 = Cecilia
-const id = "0";
+const id = "1";
 
 /**
  * Fonction permettant de fetch les données de l'utilisateur, si les données mockées sont disponibles, 
@@ -30,6 +30,7 @@ export const getUser = async () => {
     
   } catch (error) {
     console.log("Impossible d'aller chercher les données", error);
+    return
   }
 }
 
@@ -56,6 +57,7 @@ export const getUserActivity = async () => {
     
   } catch (error) {
     console.log("Impossible d'aller chercher les données", error);
+    return
   }
 }
 
@@ -84,6 +86,7 @@ export const getUserAverageSession = async () => {
     
   } catch (error) {
     console.log("Impossible d'aller chercher les données", error);
+    return
   }
 }
 
@@ -112,6 +115,7 @@ export const getUserPerformance = async () => {
     
   } catch (error) {
     console.log("Impossible d'aller chercher les données", error);
+    return
   }
 }
 
