@@ -1,15 +1,23 @@
+@media (min-width: 2000px) {
+    .line_chart, .radar,  .radial {
 
+        height: 40%;
+        width: 24%;
+        
+    }
+}
 @media (max-width : 1800px) {
 
     .line_chart, .radar,  .radial {
 
         height: 40%;
         width: 23%;
+
     }
 
     .radar {
         left: 20rem;
-
+        
     }
     .radial {
         left: 40rem;

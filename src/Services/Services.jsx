@@ -4,7 +4,7 @@ import allData from "../Services/ConfigurationUser.jsx";
 
 // la constante id permet dans le cas d'utilisation des données mockées de selectionner l'utlisateur 0 = Karl
 // 1 = Cecilia
-const id = "1";
+const id = "0";
 
 /**
  * Fonction permettant de fetch les données de l'utilisateur, si les données mockées sont disponibles, 
